@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">TrafficWB</string>
-    <string name="title_activity_maps">MapWB</string>
+    <string name="app_name">RoutingAdded</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

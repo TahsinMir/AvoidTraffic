@@ -11,65 +11,45 @@
         android:layout_weight="1"
         android:scrollbars="vertical"
         class="com.google.android.gms.maps.SupportMapFragment"/>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="1">
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_gravity="top">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/sb"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <EditText
+                android:id="@+id/cText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:editable="false"
+                android:text="Location: Mirpur Model Police Station"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Search"
-            android:onClick="geoLocate"
-            android:layout_gravity="right"/>
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <EditText
+                android:id="@+id/dText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:hint="Where to?"/>
+            <Button
+                android:id="@+id/sb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find route"
+                android:onClick="geoLocate"
+                android:layout_gravity="right"/>
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>
-
-<!--
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:paddingBottom="0dp"
-android:paddingLeft="0dp"
-android:paddingRight="0dp"
-android:paddingTop="0dp"
-tools:context=".MapsActivity"
-android:orientation="vertical">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="1">
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_weight="1" />
-
-    <Button
-        android:id="@+id/sb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:onClick="geoLocate"
-        android:layout_gravity="right"/>
-</LinearLayout>
-<fragment
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
-
-</LinearLayout>
--->
